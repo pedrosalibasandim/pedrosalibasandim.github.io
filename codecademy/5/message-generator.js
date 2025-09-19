@@ -28,3 +28,11 @@ const complements = [
   "a confused time traveler"
 ];
 
+const generateRandomMessage = () => {
+    let subject = subjects[Math.floor(Math.random() * subjects.length)];
+    let verb = verbs[Math.floor(Math.random() * verbs.length)];
+    let complement = complements[Math.floor(Math.random() * complements.length)];
+    return `${subject} ${verb} ${complement}.`;
+}
+
+console.log(generateRandomMessage());
